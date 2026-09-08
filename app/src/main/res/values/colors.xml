@@ -1,48 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Primary blue water theme -->
     <color name="primary">#1565C0</color>
-    <color name="primary_variant">#003C8F</color>
-    <color name="primary_light">#5E92F3</color>
+    <color name="primary_dark">#003C8F</color>
     <color name="secondary">#00BCD4</color>
-    <color name="secondary_light">#62EFFF</color>
-    <color name="secondary_dark">#008BA3</color>
-
-    <!-- Backgrounds -->
     <color name="background">#F0F8FF</color>
     <color name="surface">#FFFFFF</color>
-    <color name="card_bg">#FFFFFF</color>
-
-    <!-- Progress ring -->
-    <color name="progress_track">#E3F2FD</color>
-    <color name="progress_fill">#1E88E5</color>
-    <color name="progress_fill_gradient_end">#00BCD4</color>
-
-    <!-- Text -->
+    <color name="progress_track">#BBDEFB</color>
     <color name="text_primary">#0D1B2A</color>
     <color name="text_secondary">#546E7A</color>
-    <color name="text_hint">#90A4AE</color>
-    <color name="text_on_primary">#FFFFFF</color>
-
-    <!-- Quick add buttons -->
-    <color name="btn_250">#E3F2FD</color>
-    <color name="btn_500">#BBDEFB</color>
-    <color name="btn_custom">#90CAF9</color>
-
-    <!-- Bar chart bars -->
-    <color name="bar_current">#1E88E5</color>
-    <color name="bar_below_goal">#90CAF9</color>
-    <color name="bar_goal_line">#F44336</color>
-
-    <!-- Streak -->
-    <color name="streak_gold">#FFA000</color>
-    <color name="streak_bg">#FFF8E1</color>
-
-    <!-- Divider / border -->
-    <color name="divider">#E0E0E0</color>
-    <color name="ripple">#1A1565C0</color>
-
-    <!-- Bottom nav -->
-    <color name="nav_selected">#1565C0</color>
-    <color name="nav_unselected">#90A4AE</color>
+    <color name="btn_light">#E3F2FD</color>
+    <color name="btn_mid">#BBDEFB</color>
+    <color name="btn_dark">#90CAF9</color>
+    <color name="white">#FFFFFF</color>
 </resources>

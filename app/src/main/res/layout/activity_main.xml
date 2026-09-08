@@ -11,53 +11,53 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Hero header -->
+        <!-- Blue header -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="240dp"
+            android:layout_height="220dp"
             android:background="@color/primary"
             android:gravity="center"
             android:orientation="vertical"
-            android:paddingTop="40dp"
-            android:paddingBottom="24dp">
+            android:paddingTop="36dp"
+            android:paddingBottom="20dp">
 
             <ImageView
-                android:layout_width="72dp"
-                android:layout_height="72dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
                 android:src="@drawable/ic_water_drop"
-                android:tint="@android:color/white"
                 android:contentDescription="Water drop" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="10dp"
                 android:text="HydroCare"
-                android:textColor="@android:color/white"
-                android:textSize="28sp"
+                android:textColor="@color/white"
+                android:textSize="30sp"
                 android:textStyle="bold"
-                android:letterSpacing="0.04" />
+                android:letterSpacing="0.05" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Stay hydrated, stay healthy"
-                android:textColor="#B3FFFFFF"
-                android:textSize="14sp" />
+                android:text="Your daily hydration companion"
+                android:textColor="#CCE3F2FD"
+                android:textSize="13sp" />
 
         </LinearLayout>
 
         <!-- Intake card -->
         <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginTop="-28dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="8dp"
-            app:cardBackgroundColor="@color/surface">
+            android:layout_marginTop="-24dp"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardElevation="10dp"
+            card_view:cardBackgroundColor="@color/surface">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -72,7 +72,7 @@
                     android:layout_height="wrap_content"
                     android:text="0"
                     android:textColor="@color/primary"
-                    android:textSize="56sp"
+                    android:textSize="60sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -80,15 +80,14 @@
                     android:layout_height="wrap_content"
                     android:text="ml consumed today"
                     android:textColor="@color/text_secondary"
-                    android:textSize="15sp"
-                    android:layout_marginTop="2dp" />
+                    android:textSize="14sp" />
 
                 <ProgressBar
                     android:id="@+id/progressBar"
                     style="@android:style/Widget.ProgressBar.Horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="14dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="18dp"
                     android:max="2000"
                     android:progress="0"
                     android:progressTint="@color/primary"
@@ -99,25 +98,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="0 / 2000 ml daily goal"
+                    android:text="0 / 2000 ml"
                     android:textColor="@color/text_secondary"
-                    android:textSize="13sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/tvMotivation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Start your hydration journey!"
+                    android:text="Tap a button below to log your first drink!"
                     android:textColor="@color/secondary"
-                    android:textSize="14sp"
+                    android:textSize="13sp"
+                    android:gravity="center"
                     android:textStyle="italic" />
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
-        <!-- Buttons section -->
+        <!-- Quick add label -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -127,8 +127,9 @@
             android:textColor="@color/text_secondary"
             android:textSize="11sp"
             android:textStyle="bold"
-            android:letterSpacing="0.12" />
+            android:letterSpacing="0.1" />
 
+        <!-- Add buttons row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -140,45 +141,46 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn250"
                 android:layout_width="0dp"
-                android:layout_height="64dp"
+                android:layout_height="60dp"
                 android:layout_weight="1"
-                android:layout_marginEnd="6dp"
+                android:layout_marginEnd="5dp"
                 android:text="+250 ml"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
+                android:textColor="@color/primary"
                 app:cornerRadius="14dp"
-                app:backgroundTint="@color/btn_250"
-                android:textColor="@color/primary" />
+                app:backgroundTint="@color/btn_light" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn500"
                 android:layout_width="0dp"
-                android:layout_height="64dp"
+                android:layout_height="60dp"
                 android:layout_weight="1"
-                android:layout_marginStart="6dp"
-                android:layout_marginEnd="6dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
                 android:text="+500 ml"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
+                android:textColor="@color/primary"
                 app:cornerRadius="14dp"
-                app:backgroundTint="@color/btn_500"
-                android:textColor="@color/primary" />
+                app:backgroundTint="@color/btn_mid" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn750"
                 android:layout_width="0dp"
-                android:layout_height="64dp"
+                android:layout_height="60dp"
                 android:layout_weight="1"
-                android:layout_marginStart="6dp"
+                android:layout_marginStart="5dp"
                 android:text="+750 ml"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
+                android:textColor="@color/primary"
                 app:cornerRadius="14dp"
-                app:backgroundTint="@color/btn_custom"
-                android:textColor="@color/primary" />
+                app:backgroundTint="@color/btn_dark" />
 
         </LinearLayout>
 
+        <!-- Reset button -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnReset"
             android:layout_width="match_parent"
@@ -186,12 +188,12 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="12dp"
-            android:layout_marginBottom="36dp"
+            android:layout_marginBottom="40dp"
             android:text="Reset Today"
             android:textSize="15sp"
+            android:textColor="@color/white"
             app:cornerRadius="14dp"
-            app:backgroundTint="@color/primary_variant"
-            android:textColor="@android:color/white" />
+            app:backgroundTint="@color/primary_dark" />
 
     </LinearLayout>
 

@@ -1,55 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
-
-    <style name="Theme.HydroCare" parent="Theme.Material3.Light.NoActionBar">
+<resources>
+    <style name="Theme.HydroCare" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryVariant">@color/primary_variant</item>
-        <item name="colorOnPrimary">@color/text_on_primary</item>
-        <item name="colorSecondary">@color/secondary</item>
-        <item name="colorOnSecondary">@color/text_on_primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/secondary</item>
         <item name="android:colorBackground">@color/background</item>
-        <item name="colorSurface">@color/surface</item>
         <item name="android:statusBarColor">@color/primary</item>
-        <item name="android:navigationBarColor">@color/surface</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
     </style>
-
-    <style name="Theme.HydroCare.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <!-- Card style -->
-    <style name="HydroCare.Card" parent="Widget.Material3.CardView.Elevated">
-        <item name="cardCornerRadius">16dp</item>
-        <item name="cardElevation">4dp</item>
-        <item name="cardBackgroundColor">@color/card_bg</item>
-    </style>
-
-    <!-- Quick add button style -->
-    <style name="HydroCare.QuickAddButton" parent="Widget.Material3.Button.TonalButton">
-        <item name="cornerRadius">12dp</item>
-        <item name="android:paddingTop">14dp</item>
-        <item name="android:paddingBottom">14dp</item>
-        <item name="android:textSize">15sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:letterSpacing">0.02</item>
-    </style>
-
-    <!-- Segment tab style -->
-    <style name="HydroCare.SegmentTab" parent="Widget.Material3.Button.OutlinedButton">
-        <item name="cornerRadius">8dp</item>
-        <item name="android:paddingTop">8dp</item>
-        <item name="android:paddingBottom">8dp</item>
-        <item name="android:paddingStart">24dp</item>
-        <item name="android:paddingEnd">24dp</item>
-        <item name="android:textSize">13sp</item>
-    </style>
-
-    <!-- Settings section header -->
-    <style name="HydroCare.SectionHeader" parent="TextAppearance.Material3.LabelLarge">
-        <item name="android:textColor">@color/primary</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:letterSpacing">0.1</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
 </resources>

@@ -23,41 +23,40 @@ class MainActivity : AppCompatActivity() {
         val tvMotivation = findViewById<TextView>(R.id.tvMotivation)
         val progressBar = findViewById<ProgressBar>(R.id.progressBar)
 
-        fun updateUI() {
+        fun refresh() {
             val intake = prefs.getInt("intake", 0)
-            tvIntake.text = intake.toString()
-            tvGoal.text = "$intake / $goal ml daily goal"
+            tvIntake.text = "$intake"
+            tvGoal.text = "$intake / $goal ml"
             progressBar.progress = minOf(intake, goal)
             tvMotivation.text = when {
-                intake >= goal -> "Amazing! You've hit your goal today!"
-                intake >= goal / 2 -> "Keep going, you're doing great!"
+                intake >= goal -> "You crushed your goal today!"
+                intake >= goal / 2 -> "Halfway there, keep it up!"
                 intake > 0 -> "Good start, keep drinking!"
-                else -> "Start your hydration journey!"
+                else -> "Tap a button below to log your first drink!"
             }
         }
 
-        fun addWater(ml: Int) {
+        fun add(ml: Int) {
             val current = prefs.getInt("intake", 0)
             prefs.edit().putInt("intake", current + ml).apply()
-            updateUI()
+            refresh()
         }
 
-        findViewById<MaterialButton>(R.id.btn250).setOnClickListener { addWater(250) }
-        findViewById<MaterialButton>(R.id.btn500).setOnClickListener { addWater(500) }
-        findViewById<MaterialButton>(R.id.btn750).setOnClickListener { addWater(750) }
+        findViewById<MaterialButton>(R.id.btn250).setOnClickListener { add(250) }
+        findViewById<MaterialButton>(R.id.btn500).setOnClickListener { add(500) }
+        findViewById<MaterialButton>(R.id.btn750).setOnClickListener { add(750) }
         findViewById<MaterialButton>(R.id.btnReset).setOnClickListener {
             prefs.edit().putInt("intake", 0).apply()
-            updateUI()
+            refresh()
         }
 
-        updateUI()
+        refresh()
     }
 
     private fun resetIfNewDay() {
         val today = LocalDate.now().toString()
-        val lastDay = prefs.getString("last_day", "")
-        if (lastDay != today) {
-            prefs.edit().putInt("intake", 0).putString("last_day", today).apply()
+        if (prefs.getString("day", "") != today) {
+            prefs.edit().putInt("intake", 0).putString("day", today).apply()
         }
     }
 }
